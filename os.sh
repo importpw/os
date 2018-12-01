@@ -1,11 +1,6 @@
 os_platform() {
   local platform
-  platform="$(uname -o | tr '[:upper:]' '[:lower:]')"
-
-  if [ "$platform" = "gnu/linux" ]; then
-    platform="linux"
-  fi
-
+  platform="$(uname -s | tr '[:upper:]' '[:lower:]')"
   echo "$platform"
 }
 
