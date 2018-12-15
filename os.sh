@@ -18,7 +18,7 @@ os_path_push() {
   local sep=
   local path=
   for p in $PATH; do
-    if [ "$p" != "$dir" ]; then
+    if [ -n "$p" ] && [ "$p" != "$dir" ]; then
       path="${path}${sep}${p}"
       sep=:
     fi
@@ -32,7 +32,7 @@ os_path_unshift() {
   local sep=
   local path=
   for p in $PATH; do
-    if [ "$p" != "$dir" ]; then
+    if [ -n "$p" ] && [ "$p" != "$dir" ]; then
       path="${path}${sep}${p}"
       sep=:
     fi
