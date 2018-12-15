@@ -1,6 +1,8 @@
+import "string@0.0.1"
+
 os_platform() {
   local platform
-  platform="$(uname -s | tr '[:upper:]' '[:lower:]')"
+  platform="$(uname -s | string_lower)"
   echo "$platform"
 }
 
