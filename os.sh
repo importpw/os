@@ -1,4 +1,4 @@
-import "string@0.0.1"
+import "string@0.1.0"
 
 os_platform() {
   local platform
