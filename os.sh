@@ -3,6 +3,9 @@ import "string@0.1.0"
 os_platform() {
   local platform
   platform="$(uname -s | string_lower)"
+  if string_starts_with "$platform" "mingw"; then
+    platform="windows"
+  fi
   echo "$platform"
 }
 
