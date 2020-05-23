@@ -11,6 +11,7 @@ Prints the operating system platform as a lowercased string. Examples:
 
  * `darwin`
  * `linux`
+ * `windows`
 
 ```bash
 #!/usr/bin/env import
